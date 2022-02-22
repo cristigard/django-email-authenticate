@@ -1,0 +1,8 @@
+<h1>Profile page  - {{ user.username }}</h1>
+
+<img class="rounded-circle" src="{{ user.image.url }}">
+<form enctype="multipart/form-data" method="POST">{% csrf_token %}
+{{form.as_p}}
+	<input type="Submit" name="Change">
+
+</form>
